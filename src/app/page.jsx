@@ -19,6 +19,7 @@ export default function Home() {
       try {
         // Evaluate the expression
         setInput(eval(input).toString());
+        return;
       } catch (error) {
         alert("error");
         setInput("Error");
@@ -43,7 +44,9 @@ export default function Home() {
           <button className={whiteButton}>4</button>
           <button className={whiteButton}>5</button>
           <button className={whiteButton}>6</button>
-          <button className={whiteButton}>+</button>
+          <button className={whiteButton} onClick={() => calculate("+")}>
+            +
+          </button>
           <button className={whiteButton}>1</button>
           <button className={whiteButton}>2</button>
           <button className={whiteButton}>3</button>
