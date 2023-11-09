@@ -3,7 +3,13 @@
 @tailwind utilities;
 
 
+
 body, html {
   width: 100%;
   height: 100%;
+}
+
+.custom-padding {
+  margin-top: 30px;
+  margin-bottom: 30px;
 }
