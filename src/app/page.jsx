@@ -7,12 +7,11 @@ export default function Home() {
     "flex items-center justify-center w-[83px] h-[50px] bg-[#A2B2E1] rounded-lg shadow-customblue text-white font-bold text-[20px] transform transition duration-75 ease-in-out active:shadow-none active:translate-y-1";
   return (
     <div className="w-full h-full flex flex-col justify-center items-center bg-[#3B4664] gap-4 ">
-      <style>{`
-        @import url('https://fonts.googleapis.com/css2?family=League+Spartan&display=swap');
-      `}</style>
-      <div className="w-[440px] h-[100px] bg-[#181F32] rounded-md"></div>
-      <div className="w-[440px] h-[435px] rounded-md bg-[#262C45] flex justify-center items-center text-[#414954]">
-        <div className="w-[390px] h-[380px] rounded-md bg-[#262C45] grid grid-cols-4 grid-rows-5 gap-4">
+      <div className="w-[440px] h-[100px] bg-[#181F32] rounded-lg text-white font-bold text-[36px] flex items-center justify-end pr-[25px]">
+        <p className="">399,981</p>
+      </div>
+      <div className="w-[440px] h-[435px] rounded-lg bg-[#262C45] flex justify-center items-center text-[#414954]">
+        <div className="w-[390px] h-[380px]  bg-[#262C45] grid grid-cols-4 grid-rows-5 gap-4">
           <button className={whiteButton}>7</button>
           <button className={whiteButton}>8</button>
           <button className={whiteButton}>9</button>
