@@ -15,14 +15,18 @@ export default function Home() {
       setInput("");
       return;
     }
+    if (newValue === "del") {
+      setInput(input.slice(0, -1));
+      return;
+    }
     if (newValue === "=") {
       try {
         // Evaluate the expression
         setInput(eval(input).toString());
         return;
       } catch (error) {
-        alert("error");
         setInput("Error");
+        return;
       }
     }
     setInput((input) => input + newValue);
@@ -38,23 +42,51 @@ export default function Home() {
           <button className={whiteButton} onClick={() => calculate(7)}>
             7
           </button>
-          <button className={whiteButton}>8</button>
-          <button className={whiteButton}>9</button>
-          <button className={blueButton}>DEL</button>
-          <button className={whiteButton}>4</button>
-          <button className={whiteButton}>5</button>
-          <button className={whiteButton}>6</button>
+          <button className={whiteButton} onClick={() => calculate(8)}>
+            8
+          </button>
+          <button className={whiteButton} onClick={() => calculate(9)}>
+            9
+          </button>
+          <button className={blueButton} onClick={() => calculate("del")}>
+            DEL
+          </button>
+          <button className={whiteButton} onClick={() => calculate(4)}>
+            4
+          </button>
+          <button className={whiteButton} onClick={() => calculate(5)}>
+            5
+          </button>
+          <button className={whiteButton} onClick={() => calculate(6)}>
+            6
+          </button>
           <button className={whiteButton} onClick={() => calculate("+")}>
             +
           </button>
-          <button className={whiteButton}>1</button>
-          <button className={whiteButton}>2</button>
-          <button className={whiteButton}>3</button>
-          <button className={whiteButton}>-</button>
-          <button className={whiteButton}>.</button>
-          <button className={whiteButton}>0</button>
-          <button className={whiteButton}>/</button>
-          <button className={whiteButton}>x</button>
+          <button className={whiteButton} onClick={() => calculate(1)}>
+            1
+          </button>
+          <button className={whiteButton} onClick={() => calculate(2)}>
+            2
+          </button>
+          <button className={whiteButton} onClick={() => calculate(3)}>
+            3
+          </button>
+          <button className={whiteButton} onClick={() => calculate("-")}>
+            -
+          </button>
+          <button className={whiteButton} onClick={() => calculate(".")}>
+            .
+          </button>
+          <button className={whiteButton} onClick={() => calculate(0)}>
+            0
+          </button>
+          <button className={whiteButton} onClick={() => calculate("/")}>
+            /
+          </button>
+          <button className={whiteButton} onClick={() => calculate("*")}>
+            x
+          </button>
           <button
             className="flex items-center justify-center w-[185px] h-[50px] bg-[#A2B2E1] rounded-lg shadow-customblue text-white font-bold text-[20px] transform transition duration-75 ease-in-out active:shadow-none active:translate-y-1"
             onClick={() => calculate("RESET")}
